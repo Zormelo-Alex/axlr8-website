@@ -1,13 +1,1189 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,400&display=swap');
+
+*{
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body{
+  font-family: 'Poppins', sans-serif;
+}
+body::-webkit-scrollbar{
+  width: 9px;
+  height: 5px;
+}
+body::-webkit-scrollbar-track{
+  background-color: rgb(221, 221, 221);
+  border-radius: 0px;
+}
+body::-webkit-scrollbar-thumb{
+  background-color: rgb(110, 110, 110);
+  border-radius: 3px;
+}
+.frontpage{
+  position: relative;
+  min-height: 900px;
+  background-image: url("./resources/images/260192.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 1;
+  transition: all .3s ease;
+}
+.frontpage::after{
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: .0;
+  z-index: -1;
+}
+.frontpage .navbar{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 30px;
+}
+.frontpage .navbar .logo{
+  display: flex;
+  align-items: center;
+}
+.frontpage .navbar .logo img{
+  height: 40px;
+  width: 40px;
+}
+.frontpage .navbar .logo p{
+  font-weight: 900;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+}
+.frontpage .navbar .navlinks{
+  position: absolute;
+  padding: 10px;
+  left: -100vw;
+  top: 0;
+  background-color: rgb(221, 221, 221);
+  width: 0vw;
+  height: 400px;
+  width: 100%;
+  z-index: 10;
+}
+.frontpage .navbar .navlinks ul{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+.frontpage .navbar .navlinks ul li{
+  list-style: none;
+  margin-bottom: 3rem;
+}
+.frontpage .navbar .navlinks ul li a{
+  text-decoration: none;
+  color: rgb(59, 58, 58);
+  font-weight: 400;
+  font-size: 1.5rem;
+  padding-bottom: 3px;
+}
+.frontpage .navbar .navlinks ul li a:hover{
+  color: black;
+  font-weight: 400;
+  border-bottom: 1px solid rgb(59, 58, 58);
+}
+.frontpage .navbar .burger{
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1000;
+  position: fixed;
+  top: .7rem;
+  right: 1rem;
+}
+.frontpage .navbar .burger .line{
+  height: .2rem;
+  width: 2rem;
+  background-color: rgb(59, 58, 58);
+  margin-bottom: 7px;
+  transition: all .3s ease-in;
+}
+.frontpage .navbar .burger .two{
+  width: 1.5rem;
+}
+.frontpage .navbar .burger .three{
+  width: 1rem;
+}
+.frontpage.active::after{
+  opacity: .3;
+  z-index: 5;
+}
+.frontpage.active .navlinks{
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgb(221, 221, 221);
+  height: 350px;
+  width: 100%;
+  border-radius: 0px 0px 25px 25px;
+  z-index: 10;
+  transition: .3s ease-in;
+}
+.frontpage.active .navlinks ul{
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+.frontpage.active .navlinks ul li{
+  margin-bottom: 3rem;
+}
+.frontpage.active .navlinks ul li a{
+  font-size: 1.5rem;
+}
+.frontpage.active .navbar .burger .two{
+  width: 2.5rem;
+}
+.frontpage.active .navbar .burger .three{
+  width: 2.5rem;
+}
+.frontpage .flex{
+  padding: 10px 30px;
+}
+.frontpage .flex .slogan h4{
+  font-size: 2.2rem;
+  color: rgb(29, 28, 28);
+  word-spacing: 2px;
+  text-transform: capitalize;
+  margin-bottom: 2.5rem;
+  margin-top: 3.5rem;
+}
+.frontpage .flex .left{
+  margin-bottom: 2rem;
+}
+.frontpage .flex .card{
+  width: 300px;
+  height: 150px;
+  background-color: rgb(221, 221, 221);
+  box-shadow: 0px 0px 7px 0px rgb(151, 149, 149);
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.frontpage .flex .card .item{
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 10px;
+}
+.frontpage .flex .card .item img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: .7rem;
+}
+.frontpage .flex .item .text h4{
+  font-size: 1.1rem;
+  color: rgb(59, 58, 58);
+  margin-bottom: .1rem;
+  text-transform: capitalize;
+}
+.frontpage .flex .item .text p{
+  font-size: .7rem;
+  color: rgb(109, 109, 211);
+}
+.frontpage .flex .item .bottom{
+  position: absolute;
+  right: 0;
+  background-color: rgb(109, 109, 211);
+  border-radius: 5px 0px 0px 5px;
+  padding: 2px 5px;
+  font-size: 12px;
+  cursor: pointer;
+}
+.frontpage .flex .right{
+  position: relative;
+}
+.frontpage .flex .right .image{
+  position: absolute;
+  background-color: rgb(221, 221, 221);
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 5px 1px rgb(59, 58, 58);
+}
+.frontpage .flex .right .one{
+  top: 2rem;
+  right: 3rem;
+}
+.frontpage .flex .right .two{
+  bottom: -7rem;
+  right: 1.5rem;
+}
+.frontpage .flex .right .three{
+  bottom: -2rem;
+  left: -1rem;
+}
+.frontpage .flex .right .image img{
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.frontpage .flex .right .video{
+  background-color: rgb(236, 240, 245);
+  box-shadow: 0px 0px 7px 1px rgb(59, 58, 58);
+  height: 230px;
+  width: 230px;
+  padding: 8%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  position: relative;
+  margin: 0 auto;
+  top: 5rem;
+}
+.frontpage .flex .right .video img{
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  padding: 5px;
+  object-fit: cover;
+}
+.frontpage .flex .right .video .circle{
+  height: 190px;
+  width: 190px;
+  border: 5px solid transparent;
+  border-bottom: 5px solid rgb(109, 109, 211);
+  border-radius: 50%;
+  position: absolute;
+  animation: rotate 10s infinite linear;
+}
+.frontpage .flex .right .video .top{
+  border-bottom: none;
+  border: 5px solid transparent;
+  border-top: 5px solid rgb(109, 109, 211);
+  transform: rotate(65deg);
+  animation: rotatetop 10s infinite linear;
+}
+.frontpage .flex .right .video .side{
+  border-bottom: none;
+  transform: rotate(35deg);
+  border: 5px solid transparent;
+  border-left: 5px solid rgb(109, 109, 211);
+  animation: rotateside 10s infinite linear;
+}
+.midsec{
+  margin-top: 3rem;
+  padding: 1rem;
+  min-height: 100vh;
+}
+.midsec h2{
+  display: none;
+}
+.midsec .contact .cards{
+  box-shadow: 0px 0px 25px 0px rgb(151, 149, 149);
+  border-radius: 10px;
+  padding: 2px;
+  position: relative;
+}
+.midsec .contact .cards h3{
+  background-color: rgb(109, 109, 211);
+  border-radius: 15px;
+  display: flex;
+  font-weight: 200;
+  text-transform: capitalize;
+  justify-content: center;
+  width: 12rem;
+  padding: 7px 17px;
+  color: rgb(236, 240, 245);
+  letter-spacing: 1px;
+  position: absolute;
+  top: -15px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+.midsec .cards .card{
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.midsec .cards .card img{
+  height: 50px;
+  width: 50px;
+}
+.midsec .cards .card .text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  margin-top: 7px;
+}
+.midsec .cards .card .text h4{
+  font-size: 1.3rem;
+  color: rgb(151, 149, 149);
+  letter-spacing: 1px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+.midsec .cards .card .text p{
+  color: rgb(59, 58, 58);
+  font-size: 1.5rem;
+  letter-spacing: 1.5px;
+  font-weight: bold;
+}
+.midsec .cards .card .line{
+  height: 3px;
+  width: 15rem;
+  border-radius: 10px;
+  background-color: rgba(109, 109, 211, 0.671);
+}
+.midsec .cards .card .link{
+  margin: 2rem 0 1.5rem 0;
+}
+.midsec .cards .card .link a{
+  padding: 1rem 2rem;
+  background-color: rgb(109, 109, 211);
+  border-radius: 35px;
+  text-decoration: none;
+  color: rgb(236, 240, 245);
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+.midsec .cards .card .link a:hover{
+  background-color: rgb(165, 165, 202);
+}
+.midsec .cards .card .options{
+  cursor: pointer;
+  text-transform: capitalize;
+  color: rgb(151, 149, 149);
+  margin-bottom: 1rem;
+}
+.midsec .cards .card .options:hover{
+  color: rgb(59, 58, 58);
+}
+.midsec .services{
+  margin-top: 1rem;
+}
+.midsec .services .cards{
+  padding: 2.5rem 1rem;
+  display: flex;
+  overflow-x: scroll;
+}
+.midsec .services .cards .card{
+  box-shadow: 0px 0px 10px 0px rgb(201, 201, 201);
+  border-radius: 15px;
+  padding: 1rem;
+  min-width: 270px;
+  margin-right: 1.5rem;
+}
+.midsec .services .card .image{
+  background-color: rgba(216, 112, 147, 0.171);
+  padding: 1rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+.midsec .services .card .text h4{
+  color: rgb(29, 28, 28);
+  font-weight: bolder;
+  font-size: 1.5rem;
+  margin: .5rem 0;
+  text-transform: capitalize;
+}
+.midsec .services .card .text p{
+  text-align: center;
+  color: rgb(151, 149, 149);
+  font-size: 17px;
+  font-weight: 300;
+}
+.events{
+  margin: 3rem 0;
+}
+.events .top{
+  padding: 1rem;
+  display: flex;
+  margin: 2rem 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.events .top .image img{
+  height: 100px;
+  width: 100px;
+  margin-bottom: 1rem;
+}
+.events .top .text h4{
+  font-weight: bold;
+  color: rgb(29, 28, 28);
+  font-size: 2.3rem;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+}
+.events .top .text p{
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 300;
+}
+.events .bottom{
+  padding: 1rem;
+}
+.events .bottom .images .big{
+  background-image: url('./resources/images/ab.jpg');
+  height: 15rem;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  box-shadow: 0px 0px 7px 0px rgb(212, 206, 206);
+}
+.events .bottom .images .smalls{
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+.events .bottom .images .smalls .small{
+  height: 10rem;
+  width: 8rem;
+  margin: 1em;
+  border-radius: 15px;
+  box-shadow: 0px 0px 5px 0px rgb(212, 206, 206);
+}
+/* .events .bottom .images .one{
+  background-image: url("./resources/images/ahmed.JPG");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.events .bottom .images .two{
+  background-image: url("./resources/images/ahmed.JPG");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.events .bottom .images .three{
+  background-image: url("./resources/images/ahmed.JPG");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+} */
+.events .bottom .images .small{
+  background-image: url("./resources/images/ahmed.JPG");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.member-section{
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 1rem;
+}
+.member-section .members{
+  margin-top: 1rem;
+  display: flex;
+  overflow-x: scroll;
+  padding: 1rem;
+}
+.member-section .member{
+  min-width: 250px;
+  padding: .3rem;
+  box-shadow: 0px 0px 10px 0px rgb(201, 201, 201);
+  margin-right: 1rem;
+  border-radius: 5px 5px 0px 0px;
+}
+.member-section .member .name{
+  text-align: center;
+  font-weight: bold;
+  color: rgb(59, 58, 58);
+  font-size: 1.5rem;
+}
+.member-section .member .role{
+  text-align: center;
+  color: rgb(29, 28, 28);
+  font-weight: 300;
+  margin-bottom: .7rem;
+}
+.member-section .member .quote{
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  color: rgb(59, 58, 58);
+  text-transform: lowercase;
+  font-style: italic;
+}
+.member-section .members .member img{
+  height: 250px;
+  width: 100%;
+  border-radius: 5px 5px 0px 0px;
+  margin-bottom: .5rem;
+}
+.member-section .other-thing{
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.member-section .other-thing .image img{
+  height: 70px;
+  width: 70px;
+}
+.member-section .other-thing .texts h6{
+  font-size: 1.07rem;
+  color: rgb(110, 110, 110);
+  font-weight: 500;
+  margin-bottom: .5rem;
+  text-align: center;
+}
+.member-section .other-thing .texts h2{
+  color: rgb(109, 109, 211);
+  font-size: 3rem;
+  margin-bottom: .2rem;
+  text-align: center;
+}
+.member-section .other-thing .texts p{
+  letter-spacing: 1px;
+  color: rgb(151, 149, 149);
+  margin-bottom: .5rem;
+  text-align: center;
+}
+.vision{
+  padding: 1rem;
+  margin-top: 3rem;
+}
+.vision .side .text p{
+  letter-spacing: 1px;
+}
+.vision .side .text h2{
+  color: rgb(109, 109, 211);
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  margin-bottom: .2rem;
+}
+.vision .side .text .more{
+  text-align: left;
+  margin-bottom: 1rem;
+}
+.vision .other{
+  min-width: 300px;
+  height: 350px;
+}
+.vision .other video{
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  box-shadow: 0px 0px 25px 0px rgb(165, 165, 202);
+  object-fit: cover;
+}
+.footer{
+  margin-top: 1rem;
+  background-color: rgb(39, 39, 39);
+  color: rgb(236, 240, 245);
+  padding: 1rem 3rem;
+}
+.footer h2{
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+.footer p{
+  text-align: center;
+  font-size: 1em;
+  margin-bottom: 1rem;
+}
+.footer .links{
+  display: flex;
+  justify-content: center;
+}
+.footer .links ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.footer .links ul li{
+  list-style: none;
+  margin-left: .3rem;
+}
+.footer .links ul li a{
+  text-decoration: none;
+  color: rgb(201, 201, 201);
+}
+.footer .links ul li a:hover{
+  text-decoration: none;
+  color: rgb(109, 109, 211);
+}
+.footer .social-links{
+  display: flex;
+  justify-content: center;
+}
+.footer .social-links ul{
+  display: flex;
+}
+.footer .social-links ul li{
+  list-style: none;
+  margin: 10px;
+}
+.footer .social-links ul li a{
+  text-decoration: none;
+  color: rgb(29, 28, 28);
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: rgb(236, 240, 245);
+  transition: all .3s ease;
+}
+.footer .social-links ul li a:hover{
+  background-color: rgb(109, 109, 211);
+  color: rgb(236, 240, 245);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media screens */
+@media only screen and (min-width:400px){
+  .frontpage .flex .card{
+    width: 350px;
+  }
+  .events .bottom .images .smalls .small{
+    width: 9rem;
+  }
+  .vision .other{
+    min-width: 390px;
+    height: 420px;
+  }
+}
+
+@media only screen and (min-width:760px){
+  .frontpage{
+    min-height: 950px;
+  }
+  .frontpage .flex .slogan h4{
+    font-size: 3rem;
+    letter-spacing: 1px;
+    word-spacing: 0px;
+  }
+  .frontpage .flex .card{
+    width: 550px;
+    height: 120px;
+    justify-content: space-between;
+    flex-direction: initial;
+  }
+  .frontpage .flex .card .item img{
+    width: 70px;
+    height: 70px;
+  }
+  .frontpage .flex .item .text h4{
+    font-size: 1.1rem;
+    color: rgb(29, 28, 28);
+    font-weight: 300;
+  }
+  .frontpage .flex .item .text p{
+    font-size: .85rem;
+  }
+  .frontpage .flex .item .bottom{
+    width: 60px;
+    bottom: -10px;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    margin: 0 auto;
+    background-color: rgb(199, 199, 243);
+    border-radius: 15px;
+    color: rgb(59, 58, 58);
+  }
+  .frontpage .flex .right{
+    width: 100%;
+  }
+  .frontpage .flex .right .image{
+    box-shadow: 0px 0px 15px 0px rgb(59, 58, 58);
+    padding: .7%;
+  }
+  .frontpage .flex .right .one{
+    top: 3rem;
+    right: 6rem;
+    width: 50px;
+    height: 50px;
+  }
+  .frontpage .flex .right .two{
+    bottom: -10rem;
+    right: 9rem;
+    width: 60px;
+    height: 60px;
+  }
+  .frontpage .flex .right .three{
+    bottom: 4rem;
+    left: 7rem;
+  }
+  .frontpage .flex .right .image img{
+    height: 100%;
+    width: 100%;
+  }
+  .frontpage .flex .right .video{
+    box-shadow: 0px 0px 10px 0px rgb(59, 58, 58);
+    height: 220px;
+    width: 220px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    top: 5rem;
+  }
+  .frontpage .flex .right .video .circle{
+    height: 200px;
+    width: 200px; 
+  }
+  .frontpage .flex .right .video .top{
+    border-top: 5px solid rgb(109, 109, 211);
+  }
+  .frontpage .flex .right .video .side{
+    border-left: 5px solid rgb(109, 109, 211);
+  }
+  .midsec{
+    position: relative;
+    padding: 1rem;
+    min-height: fit-content;
+  }
+  .midsec h2{
+    width: fit-content;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 6rem;
+    margin: 0 auto;
+    font-size: 8rem;
+    text-align: center;
+    color: rgb(201, 201, 201);
+    display: inline;
+    z-index: -1;
+  }
+  .midsec .contact{
+    padding: 0 2rem;
+  }
+  .midsec .contact .cards{
+    box-shadow: 0px 15px 45px 0px rgb(221, 221, 221);
+    background-color: white;
+    height: 130px;
+    padding: 2rem;
+    position: relative;
+    display: flex;
+    width: 100%;
+  }
+  .midsec .contact .cards h3{
+    padding: 7px 17px;
+    font-size: .7rem;
+    top: -15px;
+    left: 25px;
+    right: auto;
+    width: fit-content;
+  }
+  .midsec .contact .cards .card{
+    margin-top: 0;
+    margin: 1rem;
+  }
+  .midsec .cards .card img{
+    height: 40px;
+    width: 40px;
+  }
+  .midsec .contact .cards .card .text{
+    margin-bottom: 0;
+    margin-top: 6px;
+    width: max-content;
+  }
+  .midsec .contact .cards .card .text h4{
+    font-size: 1rem;
+    letter-spacing: 0;
+    margin-bottom: 6px;
+  }
+  .midsec .contact .cards .card .text p{
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+    width: 100%;
+    text-align: center;
+  }
+  .midsec .cards .card .line{
+    height: 2px;
+    width: 3.5rem;
+    transform: rotate(90deg);
+  }
+  .midsec .contact .cards .card .link{
+    margin: 2rem 0 1.5rem 0;
+    width: max-content;
+  }
+  .midsec .contact .cards .book{
+    flex-direction: column;
+    width: 100%;
+  }
+  .midsec .cards .card .link a{
+    background-color: rgb(109, 109, 211);
+    font-size: 1rem;
+    transition: all .2s ease;
+    padding: 10px 1rem;
+  }
+  .midsec .cards .card .options{
+    margin-bottom: 0;
+    transition: all .3s ease;
+  }
+  .midsec .services{
+    margin-top: 5rem;
+  }
+  .midsec .services .cards{
+    padding: .5rem;
+    display: flex;
+    overflow-x: scroll;
+  }
+  .midsec .services .cards::-webkit-scrollbar{
+    height: 2px;
+  }
+  .midsec .services .cards::-webkit-scrollbar-track{
+    background-color: rgb(221, 221, 221);
+    border-radius: 50px;
+  }
+  .midsec .services .cards::-webkit-scrollbar-thumb{
+    background-color: rgb(110, 110, 110);
+    border-radius: 50px;
+  }
+  .midsec .services .cards .card{
+    box-shadow: none;
+    padding: 1rem;
+    min-width: 200px;
+    margin-right: 1rem;
+  }
+  .midsec .services .card .image{
+    padding: 1rem;
+    border-radius: 50%;
+    margin-bottom: 0;
+    background-color: transparent;
+  }
+  .midsec .services .card .text h4{
+    font-size: 1rem;
+    margin-top: 0;
+  }
+  .midsec .services .card .text p{
+    font-size: 1rem;
+  }
+  .events{
+    padding: 0 7rem;
+  }
+  .events .top{
+    padding: 0 4rem;
+  }
+  .events .top .image img{
+    margin-bottom: .5rem;
+  }
+  .events .top .text h4{
+    margin-bottom: .5rem;
+  }
+  .events .bottom{
+    padding: 0;
+  }
+  .events .bottom .images{
+    display: initial;
+  }
+  .events .bottom .images .big{
+    height: 20rem;
+  }
+  .events .bottom .images .smalls .small{
+    height: 14rem;
+    width: 14rem;
+  }
+  .member-section{
+    flex-direction: initial;
+  }
+  .member-section .members{
+    max-width: 450px;
+    padding: 1rem;
+  }
+  .member-section .members::-webkit-scrollbar{
+    height: 5px;
+  }
+  .member-section .members::-webkit-scrollbar-track{
+    background-color: rgb(221, 221, 221);
+    border-radius: 50px;
+  }
+  .member-section .members::-webkit-scrollbar-thumb{
+    background-color: rgb(110, 110, 110);
+    border-radius: 50px;
+  }
+  .member-section .other-thing{
+    margin-top: 1rem;
+    justify-content: start;
+    align-items: flex-start;
+    padding: .5rem 0rem 1rem 2.5rem;
+  }
+  .member-section .other-thing .texts h6{
+    text-align: left;
+  }
+  .member-section .other-thing .texts h2{
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+  .member-section .other-thing .texts p{
+    text-align: left;
+  }
+  .vision{
+    padding: 1rem;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .vision .side{
+    padding: 1rem;
+    max-width: 600px;
+  }
+  .vision .side .text .heading{
+    font-size: 2rem;
+    color: rgb(165, 165, 202);
+    margin-bottom: 1rem;
+  }
+  .vision .side .text h2{
+    margin-bottom: 1rem;
+  }
+  .vision .other{
+    min-width: 370px;
+    height: 340px;
+  }
+  .footer h2{
+    letter-spacing: 3px;
+  }
+  .footer p{
+    margin-bottom: 1rem;
+  }
+  .footer .text{
+    padding: 1rem 5rem;
+  }
+  .footer .links{
+    margin-bottom: 10px;
+  } 
+  .footer .links ul li{
+    margin-left: 10px;
+  }
+  .footer .links ul li a{
+    padding: 3px;
+    text-transform: uppercase;
+    transition: all .3s ease;
+  }
+  .footer .links ul li a:hover{
+    border-bottom: 1px solid rgb(109, 109, 211);
+  }
+
+}
+
+
+
+@media only screen and (min-width:1080px){
+  .frontpage{
+    min-height: 720px;
+  }
+  .frontpage .navbar .burger{
+    display: none;
+  }
+  .frontpage .navbar .navlinks{
+    top: 0;
+    position: unset;
+    width: 700px;
+    height: 60px;
+    background-color: transparent;
+  }
+  .frontpage .navbar .navlinks ul{
+    flex-direction: initial;
+    justify-content: space-between;
+  }
+  .frontpage .navbar .navlinks ul li:hover{
+    border-bottom: 1px solid rgb(59, 58, 58);
+  }
+  .frontpage .navbar .navlinks ul li a{
+    font-size: 1.3rem;
+  }
+  .frontpage .flex{
+    display: flex;
+  }
+  .frontpage .flex .slogan h4{
+    font-size: 3.5rem;
+  }
+  .frontpage .flex .card{
+    height: 100px;
+  }
+  .frontpage .flex .right .one{
+    right: 3rem;
+  }
+  .frontpage .flex .right .two{
+    bottom: -5rem;
+    right: 5rem;
+  }
+  .frontpage .flex .right .three{
+    bottom: 8.5rem;
+    left: -3rem;
+  }
+  .frontpage .flex .right .video{
+    height: 400px;
+    width: 400px;
+  }
+  .frontpage .flex .right .video .circle{
+    height: 370px;
+    width: 370px;
+  }
+  .midsec h2{
+    top: 4.5rem;
+    font-size: 11rem;
+  }
+  .midsec .contact{
+    padding: 0 5rem;
+  }
+  .midsec .contact .cards .card{
+    flex-direction: initial;
+    margin: 2px;
+  }
+  .midsec .contact .cards .card .text{
+    margin-top: 0;
+  }
+  .midsec .contact .cards .card .text h4{
+    margin-bottom: 0;
+  }
+  .midsec .contact .cards .card .text p{
+    text-align: left;
+  }
+  .midsec .contact .cards .book{
+    flex-direction: column;
+  }
+  .midsec .cards .card .options{
+    cursor: pointer;
+    margin-bottom: 0;
+    transition: all .3s ease;
+  }
+  .midsec .services .cards{
+    overflow-x: hidden;
+  }
+  .midsec .services .cards .card{
+    padding: 1.5rem;
+  }
+  .events .bottom .images .big{
+    width: 500pt;
+  }
+  .events .bottom .images{
+    display: flex;
+    margin: 0 2.5rem;
+  }
+  .events .bottom .images .big{
+    height: 25rem;
+    width: 450pt;
+    margin-right: 1em;
+  }
+  .events .bottom .images .smalls .small{
+    height: 12rem;
+    width: 13rem;
+    margin: 0 .5em;
+  }
+  .member-section .members{
+    max-width: 680px;
+  }
+  .member-section .other-thing{
+    padding: 1rem 5rem;
+    padding-right: 1rem;
+  }
+  .vision .other{
+    min-width: 470px;
+    height: 400px;
+  }
+  .footer .text{
+    padding: 1rem 10rem;
+  }
+
+
+
+}
+
+@media only screen and (min-width:1270px){
+  .frontpage .flex .right .one{
+    top: 5rem;
+    right: 4rem;
+    width: 70px;
+    height: 70px;
+  }
+  .frontpage .flex .right .two{
+    bottom: -3rem;
+    right: 7rem;
+    width: 60px;
+    height: 60px;
+  }
+  .frontpage .flex .right .three{
+    bottom: 5rem;
+    left: 5rem;
+  }
+  .midsec h2{
+    top: 5rem;
+  }
+  .midsec .contact{
+    display: flex;
+    justify-content: center;
+  }
+  .midsec .contact .cards{
+    width: fit-content;
+  }
+  .events .bottom .images{
+    margin: 0 8.5rem;
+  }
+  .vision .other{
+    min-width: 650px;
+  }
+  .footer .text{
+    padding: 1rem 15rem;
+  }
+}
+
+/* keyframes or animations */
+
+@keyframes rotateside {
+  from{
+    transform: rotate(35deg);
+  }
+  to{
+    transform: rotate(395deg);
+  }
+}
+@keyframes rotatetop {
+  from{
+    transform: rotate(65deg);
+  }
+  to{
+    transform: rotate(425deg);
+  }
+}
+@keyframes rotate {
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
 }

@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import FrontPage from "./partials/frontPage";
+import Midsec from "./partials/midsec";
+import Events from "./partials/events";
+import Members from "./partials/members";
+import Vision from "./partials/vision";
+import Footer from "./partials/footer";
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <FrontPage />
+      <Midsec />
+      <Events />
+      <Members />
+      <Vision />
+      <Footer />
     </div>
   );
 }
+
 
 export default App;
