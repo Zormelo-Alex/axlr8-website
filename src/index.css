@@ -495,8 +495,9 @@ body::-webkit-scrollbar-thumb{
 .member-section .members{
   margin-top: 1rem;
   display: flex;
-  overflow-x: scroll;
+  overflow-x: hidden;
   padding: 1rem;
+  min-height: 490px;
 }
 .member-section .member{
   min-width: 250px;
@@ -529,6 +530,7 @@ body::-webkit-scrollbar-thumb{
 .member-section .members .member img{
   height: 250px;
   width: 100%;
+  object-fit: cover;
   border-radius: 5px 5px 0px 0px;
   margin-bottom: .5rem;
 }
@@ -920,7 +922,7 @@ body::-webkit-scrollbar-thumb{
     flex-direction: initial;
   }
   .member-section .members{
-    max-width: 450px;
+    max-width: 370px;
     padding: 1rem;
   }
   .member-section .members::-webkit-scrollbar{
@@ -1105,7 +1107,8 @@ body::-webkit-scrollbar-thumb{
     margin: 0 .5em;
   }
   .member-section .members{
-    max-width: 680px;
+    max-width: 480px;
+    min-height: 480px;
   }
   .member-section .other-thing{
     padding: 1rem 5rem;

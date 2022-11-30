@@ -2,35 +2,116 @@ import React from 'react';
 import image1 from "../resources/images/ab.jpg";
 import globe from "../resources/icons/earth.png";
 
+// import Swiper core and required modules
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+
+
 const members = () => {
   return (
-    <div className="member-section" id="members">
+     <div className="member-section" id="members">
         <div className="container">
-          <div className="swiper">
-              <div className="members">
-                <div className="member">
-                  <img src={image1} alt="" />
-                  <h5 className="name">Adolph Adu-Cherry</h5>
-                  <p className="role">Big Boss</p>
-                  <p className="quote">"IF ANYTHING MUST BE DONE, THEN IT MUST BE DONE WELL"</p>
-                </div>
-                <div className="member">
-                  <img src={image1} alt="" />
-                  <h5 className="name">Adu-Cherry</h5>
-                  <p className="role">Big Boss</p>
-                  <p className="quote">"IF ANYTHING MUST BE DONE, THEN IT MUST BE DONE WELL"</p>
-                </div>
-                <div className="member">
-                  <img src={image1} alt="" />
-                  <h5 className="name">Cherry</h5>
-                  <p className="role">Big Boss</p>
-                  <p className="quote">"IF ANYTHING MUST BE DONE, THEN IT MUST BE DONE WELL"</p>
-                </div>
-                <div className="swiper-pagination"></div>
-                <div className="swiper-button-prev"></div>
-                <div className="swiper-button-next"></div>
-              </div>
-          </div>
+            <div className="members">
+              <Swiper
+                // install Swiper modules
+                modules={[Navigation, Pagination, Scrollbar, A11y]}
+                spaceBetween={20}
+                slidesPerView={1}
+                navigation
+                pagination={{ clickable: true }}
+                //scrollbar={{ draggable: true }}
+                //onSwiper={(swiper) => console.log(swiper)}
+                //onSlideChange={() => console.log('slide change')}
+              >
+                  <SwiperSlide>
+                    <div className="member">
+                      <img src={image1} alt="" />
+                      <h5 className="name">Adolph Adu-Cherry</h5>
+                      <p className="role">Big Boss</p>
+                      <p className="quote">"IF ANYTHING MUST BE DONE, THEN IT MUST BE DONE WELL"</p>
+                    </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <div className="member">
+                      <img src={image1} alt="" />
+                      <h5 className="name">Adolph Adu-Cherry</h5>
+                      <p className="role">Big Boss</p>
+                      <p className="quote">"IF ANYTHING MUST BE DONE, THEN IT MUST BE DONE WELL"</p>
+                    </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <div className="member">
+                      <img src={image1} alt="" />
+                      <h5 className="name">Adolph Adu-Cherry</h5>
+                      <p className="role">Big Boss</p>
+                      <p className="quote">"IF ANYTHING MUST BE DONE, THEN IT MUST BE DONE WELL"</p>
+                    </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <div className="member">
+                      <img src={image1} alt="" />
+                      <h5 className="name">Adolph Adu-Cherry</h5>
+                      <p className="role">Big Boss</p>
+                      <p className="quote">"IF ANYTHING MUST BE DONE, THEN IT MUST BE DONE WELL"</p>
+                    </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <div className="member">
+                      <img src={image1} alt="" />
+                      <h5 className="name">Adolph Adu-Cherry</h5>
+                      <p className="role">Big Boss</p>
+                      <p className="quote">"IF ANYTHING MUST BE DONE, THEN IT MUST BE DONE WELL"</p>
+                    </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <div className="member">
+                      <img src={image1} alt="" />
+                      <h5 className="name">Adolph Adu-Cherry</h5>
+                      <p className="role">Big Boss</p>
+                      <p className="quote">"IF ANYTHING MUST BE DONE, THEN IT MUST BE DONE WELL"</p>
+                    </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <div className="member">
+                      <img src={image1} alt="" />
+                      <h5 className="name">Adolph Adu-Cherry</h5>
+                      <p className="role">Big Boss</p>
+                      <p className="quote">"IF ANYTHING MUST BE DONE, THEN IT MUST BE DONE WELL"</p>
+                    </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <div className="member">
+                      <img src={image1} alt="" />
+                      <h5 className="name">Adolph Adu-Cherry</h5>
+                      <p className="role">Big Boss</p>
+                      <p className="quote">"IF ANYTHING MUST BE DONE, THEN IT MUST BE DONE WELL"</p>
+                    </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <div className="member">
+                      <img src={image1} alt="" />
+                      <h5 className="name">Adolph Adu-Cherry</h5>
+                      <p className="role">Big Boss</p>
+                      <p className="quote">"IF ANYTHING MUST BE DONE, THEN IT MUST BE DONE WELL"</p>
+                    </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <div className="member">
+                      <img src={image1} alt="" />
+                      <h5 className="name">Adolph Adu-Cherry</h5>
+                      <p className="role">Big Boss</p>
+                      <p className="quote">"IF ANYTHING MUST BE DONE, THEN IT MUST BE DONE WELL"</p>
+                    </div>
+                  </SwiperSlide>
+                </Swiper>
+            </div>
         </div>
         <div className="other-thing">
           <div className="image">
@@ -47,3 +128,55 @@ const members = () => {
 }
 
 export default members;
+
+
+
+
+    //   <Swiper
+    //   // install Swiper modules
+    //   modules={[Navigation, Pagination, Scrollbar, A11y]}
+    //   spaceBetween={50}
+    //   slidesPerView={2}
+    //   navigation
+    //   pagination={{ clickable: true }}
+    //   scrollbar={{ draggable: true }}
+    //   onSwiper={(swiper) => console.log(swiper)}
+    //   onSlideChange={() => console.log('slide change')}
+    // >
+    //   <SwiperSlide>
+    //     <div className="member">
+    //       <h5 className="name">Adu-Cherry</h5>
+    //       <p className="role">Big Boss</p>
+    //       <p className="quote">"IF ANYTHING MUST BE DONE, THEN IT MUST BE DONE WELL"</p>
+    //     </div>
+    //   </SwiperSlide>
+    //   <SwiperSlide>
+    //     <div className="member">
+    //       <h5 className="name">Adu-Cherry</h5>
+    //       <p className="role">Big Boss</p>
+    //       <p className="quote">"IF ANYTHING MUST BE DONE, THEN IT MUST BE DONE WELL"</p>
+    //     </div>
+    //   </SwiperSlide>
+    //   <SwiperSlide>
+    //     <div className="member">
+    //       <h5 className="name">Adu-Cherry</h5>
+    //       <p className="role">Big Boss</p>
+    //       <p className="quote">"IF ANYTHING MUST BE DONE, THEN IT MUST BE DONE WELL"</p>
+    //     </div>
+    //   </SwiperSlide>
+    //   <SwiperSlide>
+    //     <div className="member">
+    //       <h5 className="name">Adu-Cherry</h5>
+    //       <p className="role">Big Boss</p>
+    //       <p className="quote">"IF ANYTHING MUST BE DONE, THEN IT MUST BE DONE WELL"</p>
+    //     </div>
+    //   </SwiperSlide>
+    //   <SwiperSlide>
+    //     <div className="member">
+    //       <h5 className="name">Adu-Cherry</h5>
+    //       <p className="role">Big Boss</p>
+    //       <p className="quote">"IF ANYTHING MUST BE DONE, THEN IT MUST BE DONE WELL"</p>
+    //     </div>
+    //   </SwiperSlide>
+    //   ...
+    // </Swiper>
