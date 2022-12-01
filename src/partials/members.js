@@ -3,7 +3,7 @@ import image1 from "../resources/images/ab.jpg";
 import globe from "../resources/icons/earth.png";
 
 // import Swiper core and required modules
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import SwiperCore, { Navigation, Pagination, Scrollbar, A11y, Thumbs, EffectFade } from 'swiper';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -14,6 +14,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
 
+
 const members = () => {
   return (
      <div className="member-section" id="members">
@@ -21,12 +22,17 @@ const members = () => {
             <div className="members">
               <Swiper
                 // install Swiper modules
-                modules={[Navigation, Pagination, Scrollbar, A11y]}
-                spaceBetween={20}
+               modules={[Navigation, Pagination, Scrollbar, A11y, Thumbs, EffectFade]}
+                speed={800}
+                spaceBetween={10}
                 slidesPerView={1}
                 navigation
                 pagination={{ clickable: true }}
+                loop={true}
+                //grabCursor={true}
+                className= 'members-slider'
                 //scrollbar={{ draggable: true }}
+                //effect='fade'
                 //onSwiper={(swiper) => console.log(swiper)}
                 //onSlideChange={() => console.log('slide change')}
               >

@@ -499,12 +499,22 @@ body::-webkit-scrollbar-thumb{
   padding: 1rem;
   min-height: 490px;
 }
+.members-slider{
+  padding: .1rem;
+}
+.members-slider .swiper-button-prev,.members-slider .swiper-button-next{
+  color: rgb(236, 240, 245);
+}
+.members-slider .swiperNavNext{
+  height: 25px;
+  width: 25px !important;
+}
 .member-section .member{
   min-width: 250px;
   padding: .3rem;
-  box-shadow: 0px 0px 10px 0px rgb(201, 201, 201);
-  margin-right: 1rem;
-  border-radius: 5px 5px 0px 0px;
+  box-shadow: 1px 2px 5px rgb(201, 201, 201);
+  margin: .3rem;
+  border-radius: 7px;
 }
 .member-section .member .name{
   text-align: center;
