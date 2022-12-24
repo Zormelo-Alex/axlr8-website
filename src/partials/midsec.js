@@ -13,7 +13,7 @@ const midsec = () => {
     <div className="midsec" id="services">
       <div className='note'>
         <h3 className='swo' data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine">Services We Offer</h3>
-        <p className='lorem' data-aos="fade-in" data-aos-delay="200">Since the conception of this club as a developer club, We have done remote work for <span className='highlight'>agencies</span> consulted for <span className='highlight'>startups</span> and collaborated with other clubs or entities to create digital products for both consumer and business use </p>
+        <p className='lorem' data-aos="fade-in" data-aos-delay="200">Since the conception of this club as a developer club, We have done <span className='highlight'>remote work</span> for agencies <span className='highlight'>consulted</span> for startups and <span className='highlight'>collaborated</span> with other clubs or entities to create digital products for both consumer and business use </p>
         <p className='lorem' data-aos="fade-in" data-aos-delay="200">We offer a wide range of services which includes programming and teaching.</p>
       </div>
         <h2 className='name'>A X L R 8</h2>

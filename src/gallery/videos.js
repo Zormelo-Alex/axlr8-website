@@ -13,7 +13,7 @@ const videos = () => {
   ]
   const date = "May 25th, 2021";
 return (
-  <div className='box' id='photos'>
+  <div className='box'>
       <div className='flex'>
         <div>
           <div className="title">Videos</div>

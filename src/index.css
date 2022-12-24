@@ -1423,9 +1423,13 @@ body::-webkit-scrollbar-thumb{
   }
   /* gallery */
 .bg{
-  position: relative;
+  position: fixed;
   width: 20%;
   left: 0;
+}
+.main{
+  position: absolute;
+  right: 0;
 }
 .contain .nav{
   box-shadow: 0px 1px 5px 0px gray;
