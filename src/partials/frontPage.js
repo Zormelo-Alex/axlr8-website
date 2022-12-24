@@ -1,7 +1,12 @@
 import React from 'react'
-import logo from "../resources/images/RPC-JP_Logo.png";
-import image1 from "../resources/images/ab.jpg";
-import image2 from "../resources/images/ahmed.JPG";
+import logo from "../resources/images/logo.png";
+import merch from "../resources/images/merch.jpg";
+import olc from "../resources/images/olc.jfif";
+import com from "../resources/icons/com.png";
+import cc from "../resources/icons/cc.png";
+import aa from "../resources/icons/aa.png";
+import video1 from "../resources/videos/kunt.mp4";
+
 
 const burger = () => {
     document.querySelector(".frontpage").classList.toggle("active");
@@ -14,15 +19,18 @@ const frontPage = () => {
   return (
     <div className="frontpage">
         <div className="navbar">
-          <div className="logo">
-            <img src={logo} alt="axlr8 logo" />
-            <p>AXLR8</p>
-          </div>
+          <a href="#">
+            <div className="logo">
+              <img src={logo} alt="axlr8 logo" />
+              <p>AXLR8</p>
+            </div>
+          </a>
           <div className="navlinks">
             <ul>
               <li onClick={ lis }><a href="#about">About</a></li>
-              <li onClick={ lis }><a href="#members">Services</a></li>
-              <li onClick={ lis }><a href="#services">Contact Us</a></li>
+              <li onClick={ lis }><a href="#services">Services</a></li>
+              <li onClick={ lis }><a href="#events">Events</a></li>
+              <li onClick={ lis }><a href="#contact">Contact Us</a></li>
             </ul>
           </div>
           <div onClick={burger} className="burger">
@@ -33,42 +41,45 @@ const frontPage = () => {
         </div>
         <div className="flex">
           <div className="left">
-            <div className="slogan">
+            <div className="slogan" data-aos="fade-right">
               <h4>Wherever you go, <br /> Go with all <br /> your heart.</  h4>
             </div>
-            <div className="card">
+            <div className="card" data-aos="fade-left">
               <div className="item">
                 <div className="image">
-                  <img src={image1} alt="" />
+                  <img src={olc} alt="" />
                 </div>
                 <div className="text">
-                  <h4>international flights</h4>
-                  <p>Lorem ipsum dolor</p>
+                  <h4>Online Courses</h4>
+                  <p>Learn something new today!</p>
                 </div>
-                <div className="bottom">details</div>
+                <div className="bottom">View</div>
               </div>
               <div className="item">
                 <div className="image">
-                  <img src={image1} alt="" />
+                  <img src={merch} alt="" />
                 </div>
                 <div className="text">
-                  <h4>international flights</h4>
-                  <p>Lorem ipsum dolor</p>
+                  <h4>Merchandise</h4>
+                  <p>Order something fashionable now!</p>
                 </div>
-                <div className="bottom">details</div>
+                <div className="bottom">shop</div>
               </div>
             </div>
           </div>
-          <div className="right">
+          <div className="right" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
             <div className="video">
               <div className="circle top"></div>
               <div className="circle side"></div>
               <div className="circle"></div>
-              <img src={image2} />
+              <video>
+              {/* autoPlay muted loop */}
+                <source src={video1} type="video/mp4"/>
+              </video>
             </div>
-            <div className="image one"><img src={image2} /></div>
-            <div className="image two"><img src={image2} /></div>
-            <div className="image three"><img src={image2} /></div>
+            <div className="image one"><img src={com} /></div>
+            <div className="image two"><img src={cc} /></div>
+            <div className="image three"><img src={aa} /></div>
           </div>
         </div>
       </div>
