@@ -115,12 +115,17 @@ body::-webkit-scrollbar-thumb{
   border-bottom: 1px solid rgb(59, 58, 58);
 }
 .burger{
-  padding: 10px;
+  padding: 15px 10px;
   cursor: pointer;
   z-index: 1000;
   position: fixed;
   top: .7rem;
   right: 1rem;
+  background-color: rgba(0, 0, 0, 0.274);
+  border-radius: 5px;
+}
+.burger .line:last-child{
+  margin-bottom: 0;
 }
 .burger .line{
   height: .2rem;
@@ -682,7 +687,7 @@ body::-webkit-scrollbar-thumb{
 }
 .footer{
   margin-top: 1rem;
-  background-color: rgb(39, 39, 39);
+  background-image: linear-gradient(rgb(219, 218, 218), rgb(39, 39, 39));
   color: rgb(236, 240, 245);
   padding: 1rem 3rem;
 }
@@ -692,13 +697,18 @@ body::-webkit-scrollbar-thumb{
   font-weight: 600;
 }
 .footer p{
-  text-align: center;
-  font-size: 1em;
-  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+}
+.footer p img{
+  height: 50px;
+  width: 50px;
+  border-radius: 5px;
 }
 .footer .links{
   display: flex;
   justify-content: center;
+  display: none;
 }
 .footer .links ul{
   display: flex;
@@ -903,7 +913,6 @@ body::-webkit-scrollbar-thumb{
   height: 10rem;
   width: 13rem;
 }
-
 .contain .main .box .image{
   margin-top: 12px;
 }
@@ -913,6 +922,10 @@ body::-webkit-scrollbar-thumb{
 }
 .contain .main .box .flex img{
   margin-right: 1.5rem;
+}
+.footer{
+  background-color: rgb(39, 39, 39);
+  background-image: none;
 }
 
 }
