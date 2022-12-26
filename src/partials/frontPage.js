@@ -10,9 +10,11 @@ import video1 from "../resources/videos/kunt.mp4";
 
 const burger = () => {
     document.querySelector(".frontpage").classList.toggle("active");
+    document.querySelector("body").classList.toggle("no-scroll")
   }
   const lis = () => {
     document.querySelector(".frontpage").classList.remove("active");
+    document.querySelector("body").classList.toggle("no-scroll")
   }
 
 const frontPage = () => {

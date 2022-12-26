@@ -21,6 +21,9 @@ body::-webkit-scrollbar-thumb{
   background-color: rgb(110, 110, 110);
   border-radius: 3px;
 }
+.no-scroll{
+  overflow: hidden;
+}
 .frontpage{
   position: relative;
   min-height: 900px;
