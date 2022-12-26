@@ -15,14 +15,16 @@ import Collections from "../gallery/collections";
 const Gallery = () => {
     const burger = () => {
         document.querySelector(".contain").classList.toggle("active");
+        document.querySelector(".c").classList.toggle("no-scroll")
       }
       const lis = () => {
         document.querySelector(".contain").classList.remove("active");
+        document.querySelector(".c").classList.remove("no-scroll")
       }
       const {name} = useParams();
   return (
     <>
-        <div className="contain">
+        <div className="contain c">
             <div className="bg">
                 <div onClick={burger} className="burger">
                     <div className="line"></div>
@@ -31,7 +33,10 @@ const Gallery = () => {
                 </div>
                 <div className="nav">
                     <div className="logo">
-                        <Link to="/">
+                        <Link to="/" onClick={()=>{
+                        document.querySelector(".contain").classList.remove("active");
+                        document.querySelector(".c").classList.remove("no-scroll")
+                        }}>
                             <img src={logo} alt="axlr8 logo" />
                             <p>AXLR8</p>
                         </Link>
@@ -47,11 +52,14 @@ const Gallery = () => {
                     </div>
                 </div>
             </div>
-            <div className="main">
-                {name=="photos" && <Photos />}
-                {name=="videos" && <Videos /> }
-                {name=="albums" && <Albums /> }
-                {name=="collections" && <Collections /> }
+            <div className="main" onClick={()=>{
+                        document.querySelector(".contain").classList.remove("active");
+                        document.querySelector(".c").classList.remove("no-scroll")
+            }}>
+                {name === "photos" && <Photos />}
+                {name === "videos" && <Videos /> }
+                {name === "albums" && <Albums /> }
+                {name === "collections" && <Collections /> }
             </div>
         </div>
     </>
