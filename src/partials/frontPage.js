@@ -10,11 +10,11 @@ import video1 from "../resources/videos/kunt.mp4";
 
 const burger = () => {
     document.querySelector(".frontpage").classList.toggle("active");
-    document.querySelector("body").classList.toggle("no-scroll")
+    document.querySelector(".c").classList.toggle("no-scroll")
   }
   const lis = () => {
     document.querySelector(".frontpage").classList.remove("active");
-    document.querySelector("body").classList.toggle("no-scroll")
+    document.querySelector(".c").classList.remove("no-scroll")
   }
 
 const frontPage = () => {
@@ -79,9 +79,9 @@ const frontPage = () => {
                 <source src={video1} type="video/mp4"/>
               </video>
             </div>
-            <div className="image one"><img src={com} /></div>
-            <div className="image two"><img src={cc} /></div>
-            <div className="image three"><img src={aa} /></div>
+            <div className="image one"><img src={com} alt="" /></div>
+            <div className="image two"><img src={cc} alt="" /></div>
+            <div className="image three"><img src={aa} alt="" /></div>
           </div>
         </div>
       </div>
