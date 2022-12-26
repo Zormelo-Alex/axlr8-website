@@ -4,12 +4,6 @@ import gallerypng from "../resources/icons/gallery.png"
 const videos = () => {
   const videos = [
       {vidUrl: video1, id:0},
-      {vidUrl: video1, id:1},
-      {vidUrl: video1, id:2},
-      {vidUrl: video1, id:3},
-      {vidUrl: video1, id:4},
-      {vidUrl: video1, id:5},
-      {vidUrl: video1, id:6},
   ]
   const date = "May 25th, 2021";
 return (

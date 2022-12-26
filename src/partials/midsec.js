@@ -1,5 +1,4 @@
 import React from 'react';
-import globe from "../resources/icons/earth.png";
 import design from "../resources/icons/design.png";
 import consult from "../resources/icons/consult.png";
 import code from "../resources/icons/code.png";
