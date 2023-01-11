@@ -22,7 +22,7 @@ const Events = () => {
             <div className="big" data-aos="zoom-out">
             </div>
             <div className="smalls">
-              <div className='pack' data-aos="fade-up">
+              <div className='pack' data-aos="fade-down">
                 <div className="small one">
                 </div>
                 <div className="small three">
