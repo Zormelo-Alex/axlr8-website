@@ -18,7 +18,7 @@ const burger = () => {
   }
   setTimeout(()=>{
     document.querySelector(".yin-yang-container").style.display = "none";
-  },2500);
+  },3500);
 const frontPage = () => {
   return (
     <>
