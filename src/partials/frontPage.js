@@ -16,15 +16,15 @@ const burger = () => {
     document.querySelector(".frontpage").classList.remove("active");
     document.querySelector(".c").classList.remove("no-scroll")
   }
-  setTimeout(()=>{
+  window.addEventListener("load", ()=>{
     document.querySelector(".yin-yang-container").style.display = "none";
-  },3500);
+  })
 const frontPage = () => {
   return (
     <>
-      <div class="yin-yang-container">
-        <div class="yin-yang"></div>
-        <div class="name">AXLR8</div>
+      <div className="yin-yang-container">
+        <div className="yin-yang"></div>
+        <div className="name">AXLR8</div>
       </div>
       <div className="frontpage">
         <div className="navbar">
@@ -50,10 +50,10 @@ const frontPage = () => {
         </div>
         <div className="flex">
           <div className="left">
-            <div className="slogan" data-aos="fade-right" data-aos-delay="3000">
+            <div className="slogan" data-aos="fade-right">
               <h4>Wherever you go, <br /> Go with all <br /> your heart.</  h4>
             </div>
-            <div className="card" data-aos="fade-left" data-aos-delay="3000">
+            <div className="card" data-aos="fade-left">
               <div className="item">
                 <div className="image">
                   <img src={olc} alt="" />
@@ -76,7 +76,7 @@ const frontPage = () => {
               </div>
             </div>
           </div>
-          <div className="right" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-delay="3000">
+          <div className="right" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
             <div className="video">
               <div className="circle top"></div>
               <div className="circle side"></div>
