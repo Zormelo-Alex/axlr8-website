@@ -16,10 +16,17 @@ const burger = () => {
     document.querySelector(".frontpage").classList.remove("active");
     document.querySelector(".c").classList.remove("no-scroll")
   }
-
+  setTimeout(()=>{
+    document.querySelector(".yin-yang-container").style.display = "none";
+  },2500);
 const frontPage = () => {
   return (
-    <div className="frontpage">
+    <>
+      <div class="yin-yang-container">
+        <div class="yin-yang"></div>
+        <div class="name">AXLR8</div>
+      </div>
+      <div className="frontpage">
         <div className="navbar">
           <a href="#">
             <div className="logo">
@@ -85,7 +92,9 @@ const frontPage = () => {
           </div>
         </div>
       </div>
+    </>
   )
 }
+
 
 export default frontPage;
