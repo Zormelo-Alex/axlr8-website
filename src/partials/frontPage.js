@@ -42,7 +42,7 @@ const frontPage = () => {
       </div>
       <div className="flex">
         <div className="left">
-          <div className="slogan" data-aos="fade-right">
+          <div className="slogan">
             <h4>Wherever you go, <br /> Go with all <br /> your heart.</  h4>
           </div>
           <div className="card" data-aos="fade-left">
@@ -68,7 +68,7 @@ const frontPage = () => {
             </div>
           </div>
         </div>
-        <div className="right" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+        <div className="right">
           <div className="video">
             <div className="circle top"></div>
             <div className="circle side"></div>
@@ -78,9 +78,9 @@ const frontPage = () => {
               <source src={video1} type="video/mp4"/>
             </video>
           </div>
-          <div className="image one"><img src={com} alt="" loading='lazy'/></div>
+          <div className="image one" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"><img src={com} alt="" loading='lazy'/></div>
           <div className="image two"><img src={cc} alt="" loading='lazy' /></div>
-          <div className="image three"><img src={aa} alt="" loading='lazy'/></div>
+          <div className="image three" data-aos="flip-up" data-aos-easing="ease-out-cubic" data-aos-duration="2000"><img src={aa} alt="" loading='lazy'/></div>
         </div>
       </div>
     </div>
