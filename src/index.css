@@ -307,6 +307,27 @@ body::-webkit-scrollbar-thumb{
   border-left: 5px solid rgb(109, 109, 211);
   animation: rotateside 10s infinite linear;
 }
+.frontpage .scrollup{
+  position: fixed;
+  right: 1.3rem;
+  bottom: 1.3rem;
+  display: none;
+}
+.frontpage .scrollup a{
+  color: rgb(59, 58, 58);
+  background-color: rgba(0, 0, 0, 0.274);
+  padding: .7rem .9rem;
+  box-shadow: 1px 1px 4px rgb(110, 110, 110);
+  border-radius: 45%;
+  font-weight: 800;
+  font-size: large;
+}
+.scrollup.show{
+  display: block;
+}
+.frontpage.active .scrollup{
+  display: none;
+}
 .midsec{
   margin-top: 1rem;
   padding: 1rem;
@@ -906,6 +927,13 @@ body::-webkit-scrollbar-thumb{
 @media only screen and (min-width:400px){
   .frontpage .flex .card{
     width: 350px;
+  }
+  .frontpage .scrollup{
+    bottom: 1rem;
+    right: 1rem;
+  }
+  .frontpage .scrollup a{
+    padding: .6rem .7rem;
   }
   .events .bottom .images .smalls .small{
     width: 9rem;
