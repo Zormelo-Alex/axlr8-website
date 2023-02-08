@@ -930,10 +930,10 @@ body::-webkit-scrollbar-thumb{
   }
   .frontpage .scrollup{
     bottom: 1rem;
-    right: .5rem;
+    right: 1rem;
   }
   .frontpage .scrollup a{
-    padding: .4rem .5rem;
+    padding: .6rem .7rem;
   }
   .events .bottom .images .smalls .small{
     width: 9rem;
