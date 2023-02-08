@@ -6,6 +6,8 @@ import com from "../resources/icons/com.png";
 import cc from "../resources/icons/cc.png";
 import aa from "../resources/icons/aa.png";
 import video1 from "../resources/videos/kunt.mp4";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 
 
 const burger = () => {
@@ -17,6 +19,10 @@ const burger = () => {
     document.querySelector(".c").classList.remove("no-scroll")
   }
 const frontPage = () => {
+  window.addEventListener("scroll", ()=>{
+    const scrollup = document.querySelector(".scrollup");
+    scrollup.classList.toggle("show", window.scrollY > 0);
+  })
   return (
     <div className="frontpage">
       <div className="navbar">
@@ -82,6 +88,9 @@ const frontPage = () => {
           <div className="image two"><img src={cc} alt="" loading='lazy' /></div>
           <div className="image three" data-aos="flip-up" data-aos-easing="ease-out-cubic" data-aos-duration="2000"><img src={aa} alt="" loading='lazy'/></div>
         </div>
+      </div>
+      <div className="scrollup">
+      <a href="#"><FontAwesomeIcon icon={faArrowUp}></FontAwesomeIcon></a>
       </div>
     </div>
   )
