@@ -4,6 +4,7 @@ import exec from "../resources/icons/exec.png";
 import fuji from "../resources/images/fuji.jpg";
 import alex from "../resources/images/alex.jpg";
 import adolph from "../resources/images/adolph.jpg";
+import andy from "../resources/images/andy.jpeg";
 import tay from "../resources/images/tay.jpg";
 import logo from "../resources/images/logo.png";
 
@@ -23,12 +24,12 @@ const Members = [
   {name: "Tay Bernard",role: "Front Man", quote: '"IF ANYTHING MUST BE DONE, THEN IT MUST BE DONE WELL"', imgURL: tay},
   {name: "Agbo Manfuji",role: "Sus", quote: '"IF ANYTHING MUST BE DONE, THEN IT MUST BE DONE WELL"', imgURL: fuji},
   {name: "Sewor Eugene Emmanuel",role: "Project Lead", quote: '"IF ANYTHING MUST BE DONE, THEN IT MUST BE DONE WELL"', imgURL: logo},
-  {name: "Seth iforgot",role: "iforgotagain", quote: '"IF ANYTHING MUST BE DONE, THEN IT MUST BE DONE WELL"', imgURL: logo},
+  {name: "Seth Afosah",role: "iforgotagain", quote: '"IF ANYTHING MUST BE DONE, THEN IT MUST BE DONE WELL"', imgURL: logo},
   {name: "Titiati Elorm",role: "Head of inovation", quote: '"IF ANYTHING MUST BE DONE, THEN IT MUST BE DONE WELL"', imgURL: logo},
   {name: "Zormelo Alexander Dodzi",role: "PRO", quote: '"IF ANYTHING MUST BE DONE, THEN IT MUST BE DONE WELL"', imgURL: alex},
-  {name: "Asiedu One",role: "another Big Boss", quote: '"IF ANYTHING MUST BE DONE, THEN IT MUST BE DONE WELL"', imgURL: logo},
-  {name: "Hihihi",role: "Big Boss", quote: '"IF ANYTHING MUST BE DONE, THEN IT MUST BE DONE WELL"', imgURL: logo},
-  {name: "sue me",role: "Big Boss", quote: '"IF ANYTHING MUST BE DONE, THEN IT MUST BE DONE WELL"', imgURL: logo},
+  {name: "Asiedu",role: "another Big Boss", quote: '"IF ANYTHING MUST BE DONE, THEN IT MUST BE DONE WELL"', imgURL: logo},
+  {name: "Danso Andy",role: "Organizer", quote: '"Little little things count"', imgURL: andy},
+  {name: "Nyame Benjamin",role: "Big Boss", quote: '"IF ANYTHING MUST BE DONE, THEN IT MUST BE DONE WELL"', imgURL: logo},
 ];
 
 
